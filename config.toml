@@ -1,0 +1,114 @@
+baseURL = "https://beta.ruxunderscore.com/"
+languageCode = "en-us"
+title = "RuxUnderscore"
+theme = "hugo-profile"
+Paginate = 3
+enableRobotsTXT = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+page = [ "HTML", "RSS" ]
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+  [markup.asciidocExt]
+  attributes = { }
+  backend = "html5"
+  extensions = [ ]
+  failureLevel = "fatal"
+  noHeaderOrFooter = true
+  preserveTOC = false
+  safeMode = "unsafe"
+  sectionNumbers = false
+  trace = false
+  verbose = false
+  workingFolderCurrent = false
+
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+linkifyProtocol = "https"
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+
+[markup.goldmark.parser]
+autoHeadingID = true
+autoHeadingIDType = "github"
+wrapStandAloneImageWithinParagraph = true
+
+  [markup.goldmark.parser.attribute]
+  block = false
+  title = true
+
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xhtml = false
+
+  [markup.highlight]
+  anchorLineNos = false
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  hl_inline = false
+  lineAnchors = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  noHl = false
+  style = "monokai"
+  tabWidth = 4
+
+  [markup.tableOfContents]
+  endLevel = 3
+  ordered = false
+  startLevel = 2
+
+[[Menus.main]]
+identifier = "blog"
+name = "Blog"
+title = "Blog posts"
+url = "/blogs"
+weight = 1
+
+[[Menus.main]]
+identifier = "gallery"
+name = "Gallery"
+title = "Blog posts"
+url = "/gallery"
+weight = 2
+
+[params]
+title = "RuxUnderscore"
+description = "RuxUnderscore Portfolio Site"
+favicon = "/fav.png"
+useBootstrapCDN = false
+animate = true
+
+  [params.theme]
+  disableThemeToggle = true
+  defaultTheme = "dark"
+
+  [params.font]
+  fontSize = "1rem"
+  fontWeight = 400
+  lineHeight = 1.5
+  textAlign = "left"
+
+  [params.navbar]
+  align = "ms-auto"
+  brandName = "RuxUnderscore"
+  disableSearch = true
+
+    [params.navbar.menus]
+    disableAbout = false
+    disableExperience = false
+    disableEducation = false
+    disableProjects = false
+    disableAchievements = false
+    disableContact = false
